@@ -125,7 +125,50 @@ function App() {
       {isWheel ? (
         <div
           onWheel={scrollProjects}
-          className="absolute w-[100vw] h-[100vh] top-0"
+          className=" w-[100vw] h-[100vh] top-0 p-[15px] hidden mobile mt-[30px]"
+        >
+          <div className="max-w-[300px]">
+            <p className="highlight light">
+              {selectedProject.subPages[index].caption}
+            </p>
+
+            <br className="highlight" />
+            <p className="highlight ">{selectedProject.title}</p>
+            <br className="highlight" />
+          </div>
+          {selectedProject.subPages.map((project, i) => {
+            return (
+              <img
+                src={project.image}
+                alt={project.caption}
+                key={i}
+                data-index={i}
+                className={`highlight ${project.vertical ? 'vertical' : ''} ${
+                  project === fullScreen
+                    ? 'fullscreen'
+                    : project === mainImage
+                    ? 'main'
+                    : project === prevImage
+                    ? 'prev'
+                    : project === nextImage
+                    ? 'next'
+                    : i < index
+                    ? 'top'
+                    : 'bottom'
+                }`}
+              />
+            );
+          })}
+
+          <p className="highlight light text-center absolute bottom-[16px] w-full">
+            {index + 1}/{selectedProject.subPages.length}
+          </p>
+        </div>
+      ) : null}
+      {isWheel ? (
+        <div
+          onWheel={scrollProjects}
+          className="absolute w-[100vw] h-[100vh] top-0 hide"
         >
           {selectedProject.subPages.map((project, i) => {
             return (

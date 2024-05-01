@@ -175,3 +175,88 @@ body {
   background-color: #39ff14;
   font-style: italic;
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 15 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .mobile {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .mobile-header {
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .container {
+    padding: 15px 15px;
+  }
+
+  .project {
+    min-width: 85vw;
+  }
+
+  .main,
+  .prev,
+  .next,
+  .top,
+  .bottom,
+  .fullscreen {
+    position: absolute;
+    left: calc(50% - 40vw);
+    bottom: 0;
+    top: auto;
+    transition: all 1s ease-in-out;
+    max-height: 80vh;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background-color: transparent;
+    max-width: 80vw;
+  }
+
+  .prev {
+    transform: rotate(-15deg);
+    transform-origin: bottom right;
+    left: -70%;
+  }
+
+  .next {
+    transform: rotate(15deg);
+    left: 90%;
+    transform-origin: bottom left;
+  }
+
+  .bottom {
+    transform: rotate(30deg);
+    left: 100%;
+    transform-origin: bottom left;
+  }
+
+  .top {
+    transform: rotate(-30deg);
+    left: -140%;
+    transform-origin: bottom right;
+  }
+
+  .vertical.next {
+    top: auto;
+  }
+
+  .vertical.prev {
+    top: auto;
+  }
+}
