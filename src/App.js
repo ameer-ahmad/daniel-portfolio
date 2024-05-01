@@ -196,7 +196,7 @@ function App() {
             );
           })}
 
-          <p className="highlight light text-center absolute bottom-[16px] w-full">
+          <p className="highlight light text-center absolute bottom-[16px] left-0 w-full">
             {index + 1}/{selectedProject.subPages.length}
           </p>
         </div>
