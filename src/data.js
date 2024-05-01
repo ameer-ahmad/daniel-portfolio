@@ -99,10 +99,6 @@ const data = [
     image: books,
     subPages: [
       {
-        image: backCover,
-        caption: 'Back cover, 6.5" x 9.5"',
-      },
-      {
         image: books,
         caption: 'Covers, stacked, 6.5" x 9.5".',
       },
@@ -114,6 +110,10 @@ const data = [
       {
         image: leftFlap,
         caption: 'Inside flap of cover, 3.5" x 9.5".',
+      },
+      {
+        image: backCover,
+        caption: 'Back cover, 6.5" x 9.5"',
       },
       {
         image: rightFlap,
