@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daniel-portfolio/static/css/main.3c56b068.css",
-    "main.js": "/daniel-portfolio/static/js/main.f149d076.js",
+    "main.css": "/daniel-portfolio/static/css/main.2d89d59b.css",
+    "main.js": "/daniel-portfolio/static/js/main.4987903e.js",
     "static/js/453.25673b7d.chunk.js": "/daniel-portfolio/static/js/453.25673b7d.chunk.js",
     "static/media/scroll.png": "/daniel-portfolio/static/media/scroll.e180afb988e4215712b9.png",
     "static/media/logo-closeup.png": "/daniel-portfolio/static/media/logo-closeup.2bb2b2aa7c9b9e355356.png",
@@ -19,6 +19,7 @@
     "static/media/jersey.png": "/daniel-portfolio/static/media/jersey.dcb55b0ce2505d69f784.png",
     "static/media/play-flipbook.jpg": "/daniel-portfolio/static/media/play-flipbook.d8a0bcde4df41ff3db79.jpg",
     "static/media/books.png": "/daniel-portfolio/static/media/books.3fac9ced7756307deede.png",
+    "static/media/poster1.jpg": "/daniel-portfolio/static/media/poster1.b1c84b12b600ae8672ec.jpg",
     "static/media/digital-materiality.png": "/daniel-portfolio/static/media/digital-materiality.df359d860bcc90ba30ba.png",
     "static/media/back-cover.png": "/daniel-portfolio/static/media/back-cover.0d88b27d807ecc5b2d67.png",
     "static/media/texture2.jpg": "/daniel-portfolio/static/media/texture2.04c512ee0a692816f4bf.jpg",
@@ -39,12 +40,12 @@
     "static/media/PPRightSerifMono-Dark.woff2": "/daniel-portfolio/static/media/PPRightSerifMono-Dark.690cbcf4c059cb741792.woff2",
     "static/media/PPRightSerifMono-Black.woff2": "/daniel-portfolio/static/media/PPRightSerifMono-Black.f5d42201b19199c3d4fc.woff2",
     "index.html": "/daniel-portfolio/index.html",
-    "main.3c56b068.css.map": "/daniel-portfolio/static/css/main.3c56b068.css.map",
-    "main.f149d076.js.map": "/daniel-portfolio/static/js/main.f149d076.js.map",
+    "main.2d89d59b.css.map": "/daniel-portfolio/static/css/main.2d89d59b.css.map",
+    "main.4987903e.js.map": "/daniel-portfolio/static/js/main.4987903e.js.map",
     "453.25673b7d.chunk.js.map": "/daniel-portfolio/static/js/453.25673b7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c56b068.css",
-    "static/js/main.f149d076.js"
+    "static/css/main.2d89d59b.css",
+    "static/js/main.4987903e.js"
   ]
 }
