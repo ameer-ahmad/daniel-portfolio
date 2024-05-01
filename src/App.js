@@ -128,12 +128,11 @@ function App() {
           className=" w-[100vw] h-[100vh] top-0 p-[15px] hidden mobile mt-[30px]"
         >
           <div className="max-w-[300px]">
+            <p className="highlight ">{selectedProject.title}</p>
+            <br className="highlight" />
             <p className="highlight light">
               {selectedProject.subPages[index].caption}
             </p>
-
-            <br className="highlight" />
-            <p className="highlight ">{selectedProject.title}</p>
             <br className="highlight" />
           </div>
           {selectedProject.subPages.map((project, i) => {

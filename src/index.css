@@ -199,7 +199,7 @@ body {
 
   .header {
     flex-direction: column;
-    gap: 48px;
+    gap: 25px;
   }
 
   .container {
