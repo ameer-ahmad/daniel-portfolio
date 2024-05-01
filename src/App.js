@@ -34,31 +34,47 @@ function App() {
 
   const scrambleLoading = () => {
     const chars = '*?><[]&@#)(.%$-_:/;?!'.split('');
+    const daniel = 'Daniel Shui'.split('');
     const text = name.split('');
     let count = 0;
-    const scramble = setInterval(() => {
-      if (count > 10) {
-        for (let i = 0; i <= 10; i++) {
-          text[i] = chars[Math.floor(Math.random() * chars.length)];
+    setTimeout(() => {
+      const scramble = setInterval(() => {
+        if (count > 10) {
+          for (let i = 0; i <= 10; i++) {
+            text[i] = chars[Math.floor(Math.random() * chars.length)];
+          }
+        } else {
+          for (let i = 0; i <= count; i++) {
+            text[i] = chars[Math.floor(Math.random() * chars.length)];
+          }
         }
-      } else {
-        for (let i = 0; i <= count; i++) {
-          text[i] = chars[Math.floor(Math.random() * chars.length)];
+
+        setName(text.join(''));
+        count++;
+
+        if (count === 33) {
+          count = 0;
+          const unscramble = setInterval(() => {
+            for (let i = 0; i < daniel.length; i++) {
+              if (i <= count) {
+                text[i] = daniel[i];
+              } else {
+                text[i] = chars[Math.floor(Math.random() * chars.length)];
+              }
+            }
+            setName(text.join(''));
+            count++;
+            if (count >= daniel.length) {
+              clearInterval(unscramble);
+            }
+          }, 100);
+          clearInterval(scramble);
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 2000);
         }
-      }
-
-      setName(text.join(''));
-      count++;
-
-      if (count === 33) {
-        setName('Daniel Shui');
-        clearInterval(scramble);
-
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
-      }
-    }, 100);
+      }, 100);
+    }, 1000);
   };
 
   useEffect(() => {
