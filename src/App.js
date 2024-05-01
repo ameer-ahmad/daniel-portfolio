@@ -14,7 +14,7 @@ function App() {
   const [index, setIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [name, setName] = useState('Daniel Shui');
+  const [name, setName] = useState('Loading...');
 
   useEffect(() => {
     if (selectedProject) {
@@ -32,9 +32,37 @@ function App() {
     }
   }, [selectedProject, index]);
 
-  useEffect(() => {
+  const scrambleLoading = () => {
     const chars = '*?><[]&@#)(.%$-_:/;?!'.split('');
-    console.log(chars);
+    const text = name.split('');
+    let count = 0;
+    const scramble = setInterval(() => {
+      if (count > 10) {
+        for (let i = 0; i <= 10; i++) {
+          text[i] = chars[Math.floor(Math.random() * chars.length)];
+        }
+      } else {
+        for (let i = 0; i <= count; i++) {
+          text[i] = chars[Math.floor(Math.random() * chars.length)];
+        }
+      }
+
+      setName(text.join(''));
+      count++;
+
+      if (count === 33) {
+        setName('Daniel Shui');
+        clearInterval(scramble);
+
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      }
+    }, 100);
+  };
+
+  useEffect(() => {
+    scrambleLoading();
   }, []);
 
   const openProject = (e) => {
@@ -147,9 +175,14 @@ function App() {
           ))}
         </div>
       )}
-      {/* <div className="absolute w-full h-full bg-black top-0 left-0 text-white flex justify-center items-center">
-        Daniel Shui
-      </div> */}
+      <div
+        onLoad={scrambleLoading}
+        className={`absolute w-full h-full bg-black left-0 text-white flex justify-center items-center ${
+          isLoading ? 'loading' : 'done-loading'
+        }`}
+      >
+        {name}
+      </div>
     </div>
   );
 }
