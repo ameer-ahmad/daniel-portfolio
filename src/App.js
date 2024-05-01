@@ -162,7 +162,7 @@ function App() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className=" w-[100vw] h-[100vh] top-0 p-[15px] hidden mobile mt-[30px]"
+          className=" w-[100vw] h-[100vh] top-0 p-[15px] hidden mobile pt-[12px]"
         >
           <div className="max-w-[300px]">
             <p className="highlight ">{selectedProject.title}</p>

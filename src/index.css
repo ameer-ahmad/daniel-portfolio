@@ -223,7 +223,7 @@ body {
   .fullscreen {
     position: absolute;
     left: calc(50% - 40vw);
-    bottom: 25px;
+    bottom: 100px;
     top: auto;
     transition: all 1s ease-in-out;
     max-height: 80vh;
