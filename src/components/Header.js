@@ -44,7 +44,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
           <li>
             <a
               className="hover:text-black highlight hover-text link"
-              href="https://www.are.na/daniel-shui-40niceg9sse/channels"
+              href="https://www.linkedin.com/in/danielshui/"
               target="_blank"
               rel="noreferrer"
             >
@@ -62,7 +62,10 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover-text link" href="/">
+            <a
+              className="hover:text-black highlight hover-text link"
+              href="mailto:danielshui.des@gmail.com"
+            >
               Email
             </a>
           </li>
