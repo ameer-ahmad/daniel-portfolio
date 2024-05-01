@@ -73,6 +73,8 @@ body {
 
 * {
   font-family: 'PP Right Serif Mono';
+  caret-color: #39ff14;
+  letter-spacing: 0.35px;
 }
 
 .main,
@@ -169,5 +171,5 @@ body {
 }
 
 .link:hover {
-  color: #39ff14;
+  background-color: #39ff14;
 }

@@ -3,9 +3,9 @@ import React from 'react';
 const Header = ({ isWheel, setIsWheel, setIndex }) => {
   return (
     <div className="header py-[15px]  text-[16px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
-      <div className="flex gap-[142px] z-10">
+      <div className="flex gap-[142px] z-10 items-start">
         <span
-          className="cursor-pointer hover:text-black highlight hover-text"
+          className="link cursor-pointer hover:text-black highlight hover-text"
           onClick={() => {
             setIsWheel(false);
             setIndex(0);
@@ -32,22 +32,37 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
       {isWheel ? null : (
         <ul className="z-10 mr-[20px]">
           <li>
-            <a className="highlight hover-text link" href="/">
+            <a
+              className="hover:text-black highlight hover-text link"
+              href="https://www.instagram.com/daniel.shui/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Instagram
             </a>
           </li>
           <li>
-            <a className="highlight hover-text link" href="/">
+            <a
+              className="hover:text-black highlight hover-text link"
+              href="https://www.are.na/daniel-shui-40niceg9sse/channels"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
           </li>
           <li>
-            <a className="highlight hover-text link" href="/">
+            <a
+              className="hover:text-black highlight hover-text link"
+              href="https://www.are.na/daniel-shui-40niceg9sse/channels"
+              target="_blank"
+              rel="noreferrer"
+            >
               Are.na
             </a>
           </li>
           <li>
-            <a className="highlight hover-text link" href="/">
+            <a className="hover:text-black highlight hover-text link" href="/">
               Email
             </a>
           </li>
