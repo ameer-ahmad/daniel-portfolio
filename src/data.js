@@ -26,7 +26,7 @@ const data = [
   {
     id: 1,
     title: 'Analog » Digital, Undergraduate Thesis 2023-24',
-    image: letters,
+    image: bookCovers,
     subPages: [
       {
         image: letters,
@@ -90,27 +90,8 @@ const data = [
   },
   {
     id: 2,
-    title: 'Exran sans, Typeface 2022-ongoing',
-    image: font,
-    subPages: [
-      {
-        image: font,
-        caption: 'Sans serif work-in-progress display typeface.',
-      },
-      {
-        image: specimen,
-        caption: 'Type specimen, showcasing anatomy and usage.',
-      },
-      {
-        image: popup,
-        caption: 'Working download file, with EULA.',
-      },
-    ],
-  },
-  {
-    id: 3,
     title: 'Stephen King Cover Series, Book Jackets 2022',
-    image: backCover,
+    image: books,
     subPages: [
       {
         image: backCover,
@@ -132,6 +113,25 @@ const data = [
       {
         image: rightFlap,
         caption: 'Inside flap of cover, 3.5" x 9.5".',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Exran sans, Typeface 2022-ongoing',
+    image: popup,
+    subPages: [
+      {
+        image: font,
+        caption: 'Sans serif work-in-progress display typeface.',
+      },
+      {
+        image: specimen,
+        caption: 'Type specimen, showcasing anatomy and usage.',
+      },
+      {
+        image: popup,
+        caption: 'Working download file, with EULA.',
       },
     ],
   },

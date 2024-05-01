@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({ isWheel, setIsWheel, setIndex }) => {
   return (
-    <div className="py-[25px]  text-[15px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
+    <div className="py-[15px]  text-[15px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
       <div className="flex gap-[142px] z-10">
         <span
           className="cursor-pointer"
@@ -38,7 +38,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
             <a href="/">LinkedIn</a>
           </li>
           <li>
-            <a href="/">Are.Na</a>
+            <a href="/">Are.na</a>
           </li>
           <li>
             <a href="/">Email</a>

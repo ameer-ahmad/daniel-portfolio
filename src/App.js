@@ -56,7 +56,7 @@ function App() {
 
         setTimeout(() => {
           setIsLoading(false);
-        }, 500);
+        }, 1000);
       }
     }, 100);
   };
@@ -146,19 +146,35 @@ function App() {
         </div>
       ) : (
         <div
-          className="container px-[257px] flex gap-[256px] overflow-auto py-[100px] m-auto max-w-[fit-content]"
+          className="absolute bottom-0 container px-[257px] flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
             if (e.deltaY > 0) {
-              e.target.scrollLeft += 100;
+              // e.target.scrollLeft += 100;
+              let scrollAmount = 0;
+              let slideTimer = setInterval(function () {
+                e.target.scrollLeft += 10;
+                scrollAmount += 10;
+                if (scrollAmount >= e.deltaY) {
+                  window.clearInterval(slideTimer);
+                }
+              }, 25);
             } else {
               e.target.scrollLeft -= 100;
+              let scrollAmount = 0;
+              let slideTimer = setInterval(function () {
+                e.target.scrollLeft -= 10;
+                scrollAmount += 10;
+                if (scrollAmount >= e.deltaY) {
+                  window.clearInterval(slideTimer);
+                }
+              }, 25);
             }
           }}
         >
           {data.map((item, index) => (
             <div
               key={item.id}
-              className="flex gap-[20px] min-w-[556px] cursor-pointer"
+              className="project flex gap-[20px] min-w-[556px] cursor-pointer"
               onWheel={(e) => {
                 const container =
                   document.getElementsByClassName('container')[0];
