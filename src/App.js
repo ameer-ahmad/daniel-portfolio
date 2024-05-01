@@ -146,25 +146,23 @@ function App() {
         </div>
       ) : (
         <div
-          className="absolute bottom-0 container px-[257px] flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
+          className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
             if (e.deltaY > 0) {
-              // e.target.scrollLeft += 100;
               let scrollAmount = 0;
               let slideTimer = setInterval(function () {
                 e.target.scrollLeft += 10;
                 scrollAmount += 10;
-                if (scrollAmount >= e.deltaY) {
+                if (scrollAmount >= 100) {
                   window.clearInterval(slideTimer);
                 }
               }, 25);
             } else {
-              e.target.scrollLeft -= 100;
               let scrollAmount = 0;
               let slideTimer = setInterval(function () {
                 e.target.scrollLeft -= 10;
                 scrollAmount += 10;
-                if (scrollAmount >= e.deltaY) {
+                if (scrollAmount >= 100) {
                   window.clearInterval(slideTimer);
                 }
               }, 25);
@@ -174,14 +172,30 @@ function App() {
           {data.map((item, index) => (
             <div
               key={item.id}
-              className="project flex gap-[20px] min-w-[556px] cursor-pointer"
+              className="project flex gap-[20px] min-w-[656px] cursor-pointer"
               onWheel={(e) => {
-                const container =
-                  document.getElementsByClassName('container')[0];
                 if (e.deltaY > 0) {
-                  container.scrollLeft += 100;
+                  let scrollAmount = 0;
+                  let slideTimer = setInterval(function () {
+                    const container =
+                      document.getElementsByClassName('container')[0];
+                    container.scrollLeft += 10;
+                    scrollAmount += 10;
+                    if (scrollAmount >= 100) {
+                      window.clearInterval(slideTimer);
+                    }
+                  }, 25);
                 } else {
-                  container.scrollLeft -= 100;
+                  let scrollAmount = 0;
+                  let slideTimer = setInterval(function () {
+                    const container =
+                      document.getElementsByClassName('container')[0];
+                    container.scrollLeft -= 10;
+                    scrollAmount += 10;
+                    if (scrollAmount >= 100) {
+                      window.clearInterval(slideTimer);
+                    }
+                  }, 25);
                 }
               }}
               onClick={openProject}

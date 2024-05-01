@@ -59,6 +59,7 @@
 .container {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
+  height: 100%;
 }
 .container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
@@ -67,6 +68,7 @@
 body {
   overflow: hidden;
   cursor: crosshair;
+  color: #5b5b5b;
 }
 
 * {
@@ -126,7 +128,7 @@ body {
 .loading {
   opacity: 1;
   top: 0;
-  z-index: 1;
+  z-index: 11;
 }
 
 .done-loading {
@@ -138,8 +140,14 @@ body {
 
 .project {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  aspect-ratio: 3/2;
+  height: auto;
 }
 
 .project:hover {
   transform: translateY(-10px);
+}
+
+.highlight::selection {
+  background-color: #39ff14;
 }

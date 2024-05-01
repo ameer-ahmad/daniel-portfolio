@@ -2,10 +2,10 @@ import React from 'react';
 
 const Header = ({ isWheel, setIsWheel, setIndex }) => {
   return (
-    <div className="py-[15px]  text-[15px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
+    <div className="header py-[15px]  text-[15px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
       <div className="flex gap-[142px] z-10">
         <span
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-black highlight"
           onClick={() => {
             setIsWheel(false);
             setIndex(0);
@@ -16,32 +16,40 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
         {isWheel ? (
           <span>Scroll up/down</span>
         ) : (
-          <span className="w-[453px]">
+          <span className="highlight w-[453px]">
             Multidisciplinary designer experienced in branding, UI/UX,
             editorial, & more. Currently, he is in his thesis year at the
             Ontario College of Art and Design (OCADU) for graphic design. Has
             worked on projects for Chicago Bulls, Crypto.com Arena, Kansas City
             Royals, FC Barcelona, & many more.
-            <br />
-            <br />
+            <br className="highlight" />
+            <br className="highlight" />
             Daniel is currently based in Toronto and available for opportunities
             & collaborations, reach out!
           </span>
         )}
       </div>
       {isWheel ? null : (
-        <ul>
+        <ul className="z-10">
           <li>
-            <a href="/">Instagram</a>
+            <a className="hover:text-black highlight" href="/">
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="/">LinkedIn</a>
+            <a className="hover:text-black highlight" href="/">
+              LinkedIn
+            </a>
           </li>
           <li>
-            <a href="/">Are.na</a>
+            <a className="hover:text-black highlight" href="/">
+              Are.na
+            </a>
           </li>
           <li>
-            <a href="/">Email</a>
+            <a className="hover:text-black highlight" href="/">
+              Email
+            </a>
           </li>
         </ul>
       )}
