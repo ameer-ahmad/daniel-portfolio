@@ -2,10 +2,10 @@ import React from 'react';
 
 const Header = ({ isWheel, setIsWheel, setIndex }) => {
   return (
-    <div className="header py-[15px]  text-[15px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
+    <div className="header py-[15px]  text-[16px] leading-[22px] tracking-[-0.45px] px-[20px] flex justify-between m-auto">
       <div className="flex gap-[142px] z-10">
         <span
-          className="cursor-pointer hover:text-black highlight hover:font-bold"
+          className="cursor-pointer hover:text-black highlight hover-text"
           onClick={() => {
             setIsWheel(false);
             setIndex(0);
@@ -32,22 +32,22 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
       {isWheel ? null : (
         <ul className="z-10 mr-[20px]">
           <li>
-            <a className="hover:text-black highlight hover:font-bold" href="/">
+            <a className="hover:text-black highlight hover-text link" href="/">
               Instagram
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover:font-bold" href="/">
+            <a className="hover:text-black highlight hover-text link" href="/">
               LinkedIn
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover:font-bold" href="/">
+            <a className="hover:text-black highlight hover-text link" href="/">
               Are.na
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover:font-bold" href="/">
+            <a className="hover:text-black highlight hover-text link" href="/">
               Email
             </a>
           </li>

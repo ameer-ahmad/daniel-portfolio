@@ -150,7 +150,9 @@ function App() {
           })}
 
           <div className="max-w-[300px] absolute bottom-[16px] left-[21px]">
-            <p className="highlight">{selectedProject.title}</p>
+            <p className="highlight text-black font-medium">
+              {selectedProject.title}
+            </p>
             <br className="highlight" />
             <p className="highlight light">
               {selectedProject.subPages[index].caption}
@@ -228,7 +230,7 @@ function App() {
       )}
       <div
         onLoad={scrambleLoading}
-        className={`absolute w-full h-full bg-black left-0 text-white flex justify-center items-center ${
+        className={`highlight absolute w-full h-full bg-black left-0 text-white flex justify-center items-center ${
           isLoading ? 'loading' : 'done-loading'
         }`}
       >
