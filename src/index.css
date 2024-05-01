@@ -159,3 +159,7 @@ body {
 .highlight::selection {
   background-color: #39ff14;
 }
+
+.light {
+  font-weight: 300;
+}

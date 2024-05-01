@@ -136,11 +136,11 @@ function App() {
           <div className="max-w-[300px] absolute bottom-[16px] left-[21px]">
             <p className="highlight">{selectedProject.title}</p>
             <br className="highlight" />
-            <p className="highlight">
+            <p className="highlight light">
               {selectedProject.subPages[index].caption}
             </p>
             <br className="highlight" />
-            <p className="highlight">
+            <p className="highlight light">
               {index + 1}/{selectedProject.subPages.length}
             </p>
           </div>
