@@ -172,4 +172,5 @@ body {
 
 .link:hover {
   background-color: #39ff14;
+  font-style: italic;
 }
