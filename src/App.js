@@ -15,6 +15,7 @@ function App() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [name, setName] = useState('Loading...');
+  const [loadingColour, setLoadingColour] = useState(0);
 
   useEffect(() => {
     if (selectedProject) {
@@ -63,6 +64,7 @@ function App() {
               }
             }
             setName(text.join(''));
+            setLoadingColour(count + 1);
             count++;
             if (count >= daniel.length) {
               clearInterval(unscramble);
@@ -234,7 +236,10 @@ function App() {
           isLoading ? 'loading' : 'done-loading'
         }`}
       >
-        {name}
+        <span className="text-[#39FF14]">
+          {name.split('').slice(0, loadingColour).join('')}
+        </span>
+        {name.split('').slice(loadingColour).join('')}
       </div>
     </div>
   );

@@ -32,22 +32,22 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
       {isWheel ? null : (
         <ul className="z-10 mr-[20px]">
           <li>
-            <a className="hover:text-black highlight hover-text link" href="/">
+            <a className="highlight hover-text link" href="/">
               Instagram
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover-text link" href="/">
+            <a className="highlight hover-text link" href="/">
               LinkedIn
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover-text link" href="/">
+            <a className="highlight hover-text link" href="/">
               Are.na
             </a>
           </li>
           <li>
-            <a className="hover:text-black highlight hover-text link" href="/">
+            <a className="highlight hover-text link" href="/">
               Email
             </a>
           </li>

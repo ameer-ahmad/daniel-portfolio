@@ -168,6 +168,6 @@ body {
   font-weight: 500;
 }
 
-.link:hover::after {
-  content: ' »';
+.link:hover {
+  color: #39ff14;
 }
