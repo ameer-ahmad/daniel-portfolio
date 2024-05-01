@@ -83,9 +83,9 @@ body {
 .fullscreen {
   position: absolute;
   right: 50px;
-  top: calc(50% - 37.5vh);
+  top: calc(50% - 42.5vh);
   transition: all 1s ease-in-out;
-  max-height: 75vh;
+  max-height: 80vh;
   aspect-ratio: 1/1;
   object-fit: contain;
   background-color: transparent;
@@ -99,8 +99,16 @@ body {
 
 .next {
   transform: rotate(-15deg);
-  top: 90%;
+  top: 80%;
   transform-origin: top right;
+}
+
+.vertical.next {
+  top: 90%;
+}
+
+.vertical.prev {
+  top: -80%;
 }
 
 .top {

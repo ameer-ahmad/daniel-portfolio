@@ -21,6 +21,7 @@ import logoCloseup from './images/logo-closeup.png';
 import logoBlack from './images/logo-black.png';
 import drawing from './images/drawing.png';
 import jersey from './images/jersey.png';
+import poster1 from './images/poster1.jpg';
 
 const data = [
   {
@@ -56,13 +57,15 @@ const data = [
         image: question,
         caption:
           'Three-poster series—forms created from Letrasetting on a circuit board, breaker box, and projector lamp, 11" x 17", double-sided, 1000H Clearprint vellum.',
+        vertical: true,
       },
       {
         image: book,
         caption: 'Reconfigurable Type A—Z, bound, 8" x 5", Astrobright papers.',
+        vertical: true,
       },
       {
-        image: poster,
+        image: poster1,
         caption:
           'Reconfigurable Type A—Z, unbound and used to create poster layouts, 8" x 5", Astrobright papers.',
       },
@@ -75,11 +78,13 @@ const data = [
         image: scan,
         caption:
           'Redesigned poster for annual Science Olympiad event using ice and water distortions, 11" x 17", fluorescent pink and orange RISO on warm white paper.',
+        vertical: true,
       },
       {
         image: poster,
         caption:
           'Redesigned poster for a collaborative typographic exhibit between Hongik University and OCAD, 11" x 17", white and gold RISO on Canson black paper.',
+        vertical: true,
       },
       {
         image: scroll,

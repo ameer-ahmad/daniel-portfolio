@@ -14,7 +14,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
           Daniel Shui
         </span>
         {isWheel ? (
-          <span>Scroll up/down</span>
+          <span className="highlight">Scroll up/down</span>
         ) : (
           <span className="highlight w-[453px]">
             Multidisciplinary designer experienced in branding, UI/UX,

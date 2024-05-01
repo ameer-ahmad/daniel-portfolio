@@ -116,8 +116,7 @@ function App() {
                 alt={project.caption}
                 key={i}
                 data-index={i}
-                onClick={makeFullscreen}
-                className={
+                className={`highlight ${project.vertical ? 'vertical' : ''} ${
                   project === fullScreen
                     ? 'fullscreen'
                     : project === mainImage
@@ -129,17 +128,19 @@ function App() {
                     : i < index
                     ? 'top'
                     : 'bottom'
-                }
+                }`}
               />
             );
           })}
 
           <div className="max-w-[300px] absolute bottom-[16px] left-[21px]">
-            <p>{selectedProject.title}</p>
-            <br />
-            <p>{selectedProject.subPages[index].caption}</p>
-            <br />
-            <p>
+            <p className="highlight">{selectedProject.title}</p>
+            <br className="highlight" />
+            <p className="highlight">
+              {selectedProject.subPages[index].caption}
+            </p>
+            <br className="highlight" />
+            <p className="highlight">
               {index + 1}/{selectedProject.subPages.length}
             </p>
           </div>
@@ -200,7 +201,11 @@ function App() {
               }}
               onClick={openProject}
             >
-              <img src={item.image} alt={item.title} className="w-full" />
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full highlight"
+              />
             </div>
           ))}
         </div>
