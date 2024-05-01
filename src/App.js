@@ -16,6 +16,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [name, setName] = useState('Loading...');
   const [loadingColour, setLoadingColour] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   useEffect(() => {
     if (selectedProject) {
@@ -32,6 +34,39 @@ function App() {
       }
     }
   }, [selectedProject, index]);
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      if (touchStart - touchEnd > 75) {
+        if (index !== selectedProject.subPages.length - 1) {
+          setIndex((prev) => prev + 1);
+        } else {
+          setIndex(0);
+        }
+      }
+
+      if (touchStart - touchEnd < -75) {
+        if (index !== 0) {
+          setIndex((prev) => prev - 1);
+        } else {
+          setIndex(selectedProject.subPages.length - 1);
+        }
+      }
+
+      setTimeout(function () {
+        setIsScrolling(false);
+      }, 500);
+    }
+  };
 
   const scrambleLoading = () => {
     const chars = '*?><[]&@#)(.%$-_:/;?!'.split('');
@@ -124,7 +159,9 @@ function App() {
       <Header isWheel={isWheel} setIsWheel={setIsWheel} setIndex={setIndex} />
       {isWheel ? (
         <div
-          onWheel={scrollProjects}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
           className=" w-[100vw] h-[100vh] top-0 p-[15px] hidden mobile mt-[30px]"
         >
           <div className="max-w-[300px]">
