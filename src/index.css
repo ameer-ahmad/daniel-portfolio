@@ -185,6 +185,7 @@ body {
 @media screen and (max-width: 850px) {
   * {
     font-size: 12px;
+    line-height: 20px;
   }
   .mobile {
     display: block;
