@@ -133,24 +133,26 @@ function App() {
   };
 
   const scrollProjects = (e) => {
-    if (!isScrolling) {
-      setIsScrolling(true);
-      if (e.deltaY > 0) {
-        if (index !== selectedProject.subPages.length - 1) {
-          setIndex((prev) => prev + 1);
+    if (e.deltaX === 0) {
+      if (!isScrolling) {
+        setIsScrolling(true);
+        if (e.deltaY > 0) {
+          if (index !== selectedProject.subPages.length - 1) {
+            setIndex((prev) => prev + 1);
+          } else {
+            setIndex(0);
+          }
         } else {
-          setIndex(0);
+          if (index !== 0) {
+            setIndex((prev) => prev - 1);
+          } else {
+            setIndex(selectedProject.subPages.length - 1);
+          }
         }
-      } else {
-        if (index !== 0) {
-          setIndex((prev) => prev - 1);
-        } else {
-          setIndex(selectedProject.subPages.length - 1);
-        }
+        setTimeout(function () {
+          setIsScrolling(false);
+        }, 750);
       }
-      setTimeout(function () {
-        setIsScrolling(false);
-      }, 750);
     }
   };
 
@@ -247,7 +249,6 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
-            e.nativeEvent.preventDefault();
             if (e.deltaX === 0) {
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
