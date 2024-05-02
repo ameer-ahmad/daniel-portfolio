@@ -46,7 +46,7 @@ function App() {
   const handleTouchEnd = () => {
     if (!isScrolling) {
       setIsScrolling(true);
-      if (touchStart - touchEnd > 75) {
+      if (touchStart - touchEnd > 150) {
         if (index !== selectedProject.subPages.length - 1) {
           setIndex((prev) => prev + 1);
         } else {
@@ -54,7 +54,7 @@ function App() {
         }
       }
 
-      if (touchStart - touchEnd < -75) {
+      if (touchStart - touchEnd < -150) {
         if (index !== 0) {
           setIndex((prev) => prev - 1);
         } else {
@@ -64,7 +64,7 @@ function App() {
 
       setTimeout(function () {
         setIsScrolling(false);
-      }, 500);
+      }, 1000);
     }
   };
 
