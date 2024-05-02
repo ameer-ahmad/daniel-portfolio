@@ -247,6 +247,7 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
+            e.preventDefault();
             console.log(e);
             if (e.deltaX === 0) {
               if (e.deltaY > 0) {
