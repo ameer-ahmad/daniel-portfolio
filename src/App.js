@@ -248,7 +248,7 @@ function App() {
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
             console.log(e);
-            if (e.type === 'wheel') {
+            if (e.deltaX === 0) {
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
