@@ -136,6 +136,7 @@ function App() {
     if (e.deltaX === 0) {
       if (!isScrolling) {
         setIsScrolling(true);
+        console.log('test');
         if (e.deltaY > 0) {
           if (index !== selectedProject.subPages.length - 1) {
             setIndex((prev) => prev + 1);
