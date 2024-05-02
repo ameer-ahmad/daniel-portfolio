@@ -268,6 +268,26 @@ function App() {
                   }
                 }, 25);
               }
+            } else {
+              if (e.deltaX > 0) {
+                let scrollAmount = 0;
+                let slideTimer = setInterval(function () {
+                  e.target.scrollLeft += 10;
+                  scrollAmount += 10;
+                  if (scrollAmount >= 100) {
+                    window.clearInterval(slideTimer);
+                  }
+                }, 25);
+              } else {
+                let scrollAmount = 0;
+                let slideTimer = setInterval(function () {
+                  e.target.scrollLeft -= 10;
+                  scrollAmount += 10;
+                  if (scrollAmount >= 100) {
+                    window.clearInterval(slideTimer);
+                  }
+                }, 25);
+              }
             }
           }}
         >
