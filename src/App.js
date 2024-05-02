@@ -150,7 +150,7 @@ function App() {
       }
       setTimeout(function () {
         setIsScrolling(false);
-      }, 500);
+      }, 750);
     }
   };
 
@@ -162,7 +162,7 @@ function App() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className=" w-[100vw] h-[100vh] top-0 px-[20px] py-[15px] hidden mobile pt-[12px]"
+          className=" w-[100vw] h-[100vh] top-0 px-[20px] py-[15px] hidden mobile pt-[12px] overflow-hidden"
         >
           <div className="max-w-[300px]">
             <p className="highlight ">{selectedProject.title}</p>
@@ -204,7 +204,7 @@ function App() {
       {isWheel ? (
         <div
           onWheel={scrollProjects}
-          className="absolute w-[100vw] h-[100vh] top-0 hide"
+          className="absolute w-[100vw] h-[100vh] top-0 hide overflow-hidden"
         >
           {selectedProject.subPages.map((project, i) => {
             return (
@@ -247,7 +247,7 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
-            e.preventDefault();
+            e.nativeEvent.preventDefault();
             if (e.deltaX === 0) {
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
@@ -296,7 +296,6 @@ function App() {
               key={item.id}
               className="project flex gap-[20px] min-w-[656px] cursor-pointer"
               onWheel={(e) => {
-                e.preventDefault();
                 if (e.deltaX === 0) {
                   if (e.deltaY > 0) {
                     let scrollAmount = 0;
