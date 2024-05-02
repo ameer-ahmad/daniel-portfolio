@@ -264,4 +264,8 @@ body {
   .vertical.prev {
     top: auto;
   }
+
+  .project:hover {
+    transform: translateY(0);
+  }
 }

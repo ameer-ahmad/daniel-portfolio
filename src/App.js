@@ -247,24 +247,26 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
-            if (e.deltaY > 0) {
-              let scrollAmount = 0;
-              let slideTimer = setInterval(function () {
-                e.target.scrollLeft += 10;
-                scrollAmount += 10;
-                if (scrollAmount >= 100) {
-                  window.clearInterval(slideTimer);
-                }
-              }, 25);
-            } else {
-              let scrollAmount = 0;
-              let slideTimer = setInterval(function () {
-                e.target.scrollLeft -= 10;
-                scrollAmount += 10;
-                if (scrollAmount >= 100) {
-                  window.clearInterval(slideTimer);
-                }
-              }, 25);
+            if (!e.deltaX) {
+              if (e.deltaY > 0) {
+                let scrollAmount = 0;
+                let slideTimer = setInterval(function () {
+                  e.target.scrollLeft += 10;
+                  scrollAmount += 10;
+                  if (scrollAmount >= 100) {
+                    window.clearInterval(slideTimer);
+                  }
+                }, 25);
+              } else {
+                let scrollAmount = 0;
+                let slideTimer = setInterval(function () {
+                  e.target.scrollLeft -= 10;
+                  scrollAmount += 10;
+                  if (scrollAmount >= 100) {
+                    window.clearInterval(slideTimer);
+                  }
+                }, 25);
+              }
             }
           }}
         >
