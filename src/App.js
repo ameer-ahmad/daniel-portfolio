@@ -325,7 +325,9 @@ function App() {
                   if (e.deltaX > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
-                      e.target.scrollLeft += 10;
+                      const container =
+                        document.getElementsByClassName('container')[0];
+                      container.scrollLeft += 10;
                       scrollAmount += 10;
                       if (scrollAmount >= 100) {
                         window.clearInterval(slideTimer);
@@ -334,7 +336,9 @@ function App() {
                   } else {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
-                      e.target.scrollLeft -= 10;
+                      const container =
+                        document.getElementsByClassName('container')[0];
+                      container.scrollLeft -= 10;
                       scrollAmount += 10;
                       if (scrollAmount >= 100) {
                         window.clearInterval(slideTimer);
