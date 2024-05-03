@@ -135,7 +135,7 @@ function App() {
   const scrollProjects = (e) => {
     if (e.deltaX === 0) {
       if (!isScrolling) {
-        if (Math.abs(e.deltaY) < 50) return;
+        if (Math.abs(e.deltaY) < 10) return;
         setIsScrolling(true);
         console.log(e);
         if (e.deltaY > 0) {
@@ -265,7 +265,7 @@ function App() {
           onWheel={(e) => {
             console.log(e);
             if (e.deltaX === 0) {
-              if (Math.abs(e.deltaY) < 10) return;
+              if (Math.abs(e.deltaY) < 4) return;
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -286,7 +286,7 @@ function App() {
                 }, 25);
               }
             } else {
-              if (Math.abs(e.deltaX) < 10) return;
+              if (Math.abs(e.deltaX) < 4) return;
               if (e.deltaX > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -316,7 +316,7 @@ function App() {
               onWheel={(e) => {
                 console.log(e);
                 if (e.deltaX === 0) {
-                  if (Math.abs(e.deltaY) < 10) return;
+                  if (Math.abs(e.deltaY) < 4) return;
                   if (e.deltaY > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
@@ -341,7 +341,7 @@ function App() {
                     }, 25);
                   }
                 } else {
-                  if (Math.abs(e.deltaX) < 10) return;
+                  if (Math.abs(e.deltaX) < 4) return;
                   if (e.deltaX > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
