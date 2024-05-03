@@ -264,7 +264,7 @@ function App() {
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
             if (e.deltaX === 0) {
-              if (Math.abs(e.deltaY) < 50) return;
+              if (Math.abs(e.deltaY) < 10) return;
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -285,7 +285,7 @@ function App() {
                 }, 25);
               }
             } else {
-              if (Math.abs(e.deltaX) < 50) return;
+              if (Math.abs(e.deltaX) < 10) return;
               if (e.deltaX > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -314,7 +314,7 @@ function App() {
               className="project flex gap-[20px] min-w-[656px] cursor-pointer"
               onWheel={(e) => {
                 if (e.deltaX === 0) {
-                  if (Math.abs(e.deltaY) < 50) return;
+                  if (Math.abs(e.deltaY) < 10) return;
                   if (e.deltaY > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
@@ -339,7 +339,7 @@ function App() {
                     }, 25);
                   }
                 } else {
-                  if (Math.abs(e.deltaX) < 50) return;
+                  if (Math.abs(e.deltaX) < 10) return;
                   if (e.deltaX > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
