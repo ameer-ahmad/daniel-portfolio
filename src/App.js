@@ -271,7 +271,7 @@ function App() {
                 let slideTimer = setInterval(function () {
                   e.target.scrollLeft += 10;
                   scrollAmount += 10;
-                  if (scrollAmount >= e.deltaY) {
+                  if (scrollAmount >= Math.abs(e.deltaY)) {
                     window.clearInterval(slideTimer);
                   }
                 }, 25);
@@ -292,7 +292,7 @@ function App() {
                 let slideTimer = setInterval(function () {
                   e.target.scrollLeft += 10;
                   scrollAmount += 10;
-                  if (scrollAmount >= 100) {
+                  if (scrollAmount >= Math.abs(e.deltaX)) {
                     window.clearInterval(slideTimer);
                   }
                 }, 25);
@@ -301,7 +301,7 @@ function App() {
                 let slideTimer = setInterval(function () {
                   e.target.scrollLeft -= 10;
                   scrollAmount += 10;
-                  if (scrollAmount >= 100) {
+                  if (scrollAmount >= Math.abs(e.deltaX)) {
                     window.clearInterval(slideTimer);
                   }
                 }, 25);
@@ -324,7 +324,7 @@ function App() {
                         document.getElementsByClassName('container')[0];
                       container.scrollLeft += 10;
                       scrollAmount += 10;
-                      if (scrollAmount >= 100) {
+                      if (scrollAmount >= Math.abs(e.deltaY)) {
                         window.clearInterval(slideTimer);
                       }
                     }, 25);
@@ -335,7 +335,7 @@ function App() {
                         document.getElementsByClassName('container')[0];
                       container.scrollLeft -= 10;
                       scrollAmount += 10;
-                      if (scrollAmount >= 100) {
+                      if (scrollAmount >= Math.abs(e.deltaY)) {
                         window.clearInterval(slideTimer);
                       }
                     }, 25);
@@ -349,7 +349,7 @@ function App() {
                         document.getElementsByClassName('container')[0];
                       container.scrollLeft += 10;
                       scrollAmount += 10;
-                      if (scrollAmount >= 100) {
+                      if (scrollAmount >= Math.abs(e.deltaX)) {
                         window.clearInterval(slideTimer);
                       }
                     }, 25);
@@ -360,7 +360,7 @@ function App() {
                         document.getElementsByClassName('container')[0];
                       container.scrollLeft -= 10;
                       scrollAmount += 10;
-                      if (scrollAmount >= 100) {
+                      if (scrollAmount >= Math.abs(e.deltaX)) {
                         window.clearInterval(slideTimer);
                       }
                     }, 25);
