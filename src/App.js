@@ -157,6 +157,18 @@ function App() {
     }
   };
 
+  const debounce = function (fn, d) {
+    let timer;
+    return function () {
+      let context = this;
+      let args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(context, args);
+      }, d);
+    };
+  };
+
   return (
     <div className="App font-serif overflow-x-hidden">
       <Header isWheel={isWheel} setIsWheel={setIsWheel} setIndex={setIndex} />
@@ -206,7 +218,7 @@ function App() {
       ) : null}
       {isWheel ? (
         <div
-          onWheel={scrollProjects}
+          onWheel={debounce(scrollProjects, 1)}
           className="absolute w-[100vw] h-[100vh] top-0 hide overflow-hidden"
         >
           {selectedProject.subPages.map((project, i) => {
