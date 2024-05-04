@@ -135,7 +135,7 @@ function App() {
   const scrollProjects = (e) => {
     if (e.deltaX === 0) {
       if (!isScrolling) {
-        if (Math.abs(e.deltaY) < 5) return;
+        if (Math.abs(e.deltaY) < 7) return;
         setIsScrolling(true);
         console.log(e);
         if (e.deltaY > 0) {
