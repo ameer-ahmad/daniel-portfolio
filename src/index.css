@@ -225,7 +225,7 @@ body {
     left: calc(50% - 40vw);
     bottom: 100px;
     top: auto;
-    transition: all 1s ease-in-out;
+    transition: all 500ms ease-in-out;
     max-height: 80vh;
     aspect-ratio: 1/1;
     object-fit: contain;

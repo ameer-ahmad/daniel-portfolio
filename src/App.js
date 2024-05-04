@@ -64,7 +64,7 @@ function App() {
 
       setTimeout(function () {
         setIsScrolling(false);
-      }, 1000);
+      }, 500);
     }
   };
 
