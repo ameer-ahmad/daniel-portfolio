@@ -86,7 +86,7 @@ body {
   position: absolute;
   right: 50px;
   top: calc(50% - 42.5vh);
-  transition: all 500ms ease-in-out;
+  transition: all 600ms ease-in-out;
   max-height: 80vh;
   aspect-ratio: 1/1;
   object-fit: contain;
@@ -225,7 +225,7 @@ body {
     left: calc(50% - 40vw);
     bottom: 100px;
     top: auto;
-    transition: all 500ms ease-in-out;
+    transition: all 600ms ease-in-out;
     max-height: 80vh;
     aspect-ratio: 1/1;
     object-fit: contain;
