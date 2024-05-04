@@ -265,7 +265,6 @@ function App() {
           onWheel={(e) => {
             console.log(e);
             if (e.deltaX === 0) {
-              if (Math.abs(e.deltaY) < 4) return;
               if (e.deltaY > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -286,7 +285,6 @@ function App() {
                 }, 25);
               }
             } else {
-              if (Math.abs(e.deltaX) < 4) return;
               if (e.deltaX > 0) {
                 let scrollAmount = 0;
                 let slideTimer = setInterval(function () {
@@ -316,7 +314,6 @@ function App() {
               onWheel={(e) => {
                 console.log(e);
                 if (e.deltaX === 0) {
-                  if (Math.abs(e.deltaY) < 4) return;
                   if (e.deltaY > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
@@ -341,7 +338,6 @@ function App() {
                     }, 25);
                   }
                 } else {
-                  if (Math.abs(e.deltaX) < 4) return;
                   if (e.deltaX > 0) {
                     let scrollAmount = 0;
                     let slideTimer = setInterval(function () {
