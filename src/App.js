@@ -153,7 +153,7 @@ function App() {
         }
         setTimeout(function () {
           setIsScrolling(false);
-        }, 750);
+        }, 1000);
       }
     }
   };
