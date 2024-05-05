@@ -60,6 +60,7 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   height: 100%;
+  overflow-x: hidden;
 }
 .container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
@@ -209,6 +210,7 @@ body {
   .container {
     padding: 15px 15px;
     gap: 150px;
+    overflow-x: auto;
   }
 
   .project {
