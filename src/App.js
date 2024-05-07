@@ -263,10 +263,13 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
+            e.stopPropagation();
             if (e.deltaX) return;
-
-            e.target.scrollLeft += e.deltaY + e.deltaX;
-            e.preventDefault();
+            if (e.deltaY > 0) {
+              e.target.scrollLeft += 500;
+            } else {
+              e.target.scrollLeft -= 500;
+            }
             // console.log(e);
             // if (e.deltaX === 0) {
             //   if (e.deltaY > 0) {
@@ -317,11 +320,16 @@ function App() {
               key={item.id}
               className="project flex gap-[20px] min-w-[656px] cursor-pointer"
               onWheel={(e) => {
+                e.stopPropagation();
                 if (e.deltaX) return;
                 const container =
                   document.getElementsByClassName('container')[0];
-                container.scrollLeft += e.deltaY + e.deltaX;
-                e.preventDefault();
+                if (e.deltaY > 0) {
+                  container.scrollLeft += 500;
+                } else {
+                  container.scrollLeft -= 500;
+                }
+
                 // console.log(e);
                 // if (e.deltaX === 0) {
                 //   if (e.deltaY > 0) {
