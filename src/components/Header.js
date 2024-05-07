@@ -53,7 +53,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
               target="_blank"
               rel="noreferrer"
             >
-              → Instagram
+              →Instagram
             </a>
           </li>
           <li>
@@ -63,7 +63,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
               target="_blank"
               rel="noreferrer"
             >
-              → LinkedIn
+              →LinkedIn
             </a>
           </li>
           <li>
@@ -73,7 +73,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
               target="_blank"
               rel="noreferrer"
             >
-              → Are.na
+              →Are.na
             </a>
           </li>
           <li>
@@ -81,7 +81,7 @@ const Header = ({ isWheel, setIsWheel, setIndex }) => {
               className="hover:text-black highlight hover-text link"
               href="mailto:danielshui.des@gmail.com"
             >
-              → Email
+              →Email
             </a>
           </li>
         </ul>
