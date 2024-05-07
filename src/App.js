@@ -220,7 +220,7 @@ function App() {
       {isWheel ? (
         <div
           onWheel={debounce(scrollProjects, 1)}
-          className="absolute w-[100vw] h-[100vh] top-0 hide overflow-hidden"
+          className="absolute w-[100vw] h-[100vh] top-0 hide "
         >
           {selectedProject.subPages.map((project, i) => {
             return (
