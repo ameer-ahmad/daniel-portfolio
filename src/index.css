@@ -61,7 +61,6 @@
   scrollbar-width: none; /* Firefox */
   height: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 .container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */

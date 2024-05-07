@@ -263,13 +263,8 @@ function App() {
         <div
           className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
           onWheel={(e) => {
-            e.stopPropagation();
             if (e.deltaX) return;
-            if (e.deltaY > 0) {
-              e.target.scrollLeft += 500;
-            } else {
-              e.target.scrollLeft -= 500;
-            }
+            e.target.scrollLeft += e.deltaY + e.deltaX;
             // console.log(e);
             // if (e.deltaX === 0) {
             //   if (e.deltaY > 0) {
@@ -324,11 +319,7 @@ function App() {
                 if (e.deltaX) return;
                 const container =
                   document.getElementsByClassName('container')[0];
-                if (e.deltaY > 0) {
-                  container.scrollLeft += 500;
-                } else {
-                  container.scrollLeft -= 500;
-                }
+                container.scrollLeft += e.deltaY + e.deltaX;
 
                 // console.log(e);
                 // if (e.deltaX === 0) {
