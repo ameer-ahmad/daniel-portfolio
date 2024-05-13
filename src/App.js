@@ -261,127 +261,129 @@ function App() {
         </div>
       ) : (
         <div
-          className="absolute bottom-0 container px-[257px] items-end flex gap-[356px] overflow-auto pt-[100px] pb-[15px] m-auto max-w-[fit-content]"
-          onWheel={(e) => {
-            if (e.deltaX) return;
-            e.target.scrollLeft += e.deltaY + e.deltaX;
-            // console.log(e);
-            // if (e.deltaX === 0) {
-            //   if (e.deltaY > 0) {
-            //     let scrollAmount = 0;
-            //     let slideTimer = setInterval(function () {
-            //       e.target.scrollLeft += 10;
-            //       scrollAmount += 10;
-            //       if (scrollAmount >= Math.abs(e.deltaY)) {
-            //         window.clearInterval(slideTimer);
-            //       }
-            //     }, 25);
-            //   } else {
-            //     let scrollAmount = 0;
-            //     let slideTimer = setInterval(function () {
-            //       e.target.scrollLeft -= 10;
-            //       scrollAmount += 10;
-            //       if (scrollAmount >= Math.abs(e.deltaY)) {
-            //         window.clearInterval(slideTimer);
-            //       }
-            //     }, 25);
-            //   }
-            // }
-            // } else {
-            //   if (e.deltaX > 0) {
-            //     let scrollAmount = 0;
-            //     let slideTimer = setInterval(function () {
-            //       e.target.scrollLeft += 10;
-            //       scrollAmount += 10;
-            //       if (scrollAmount >= Math.abs(e.deltaX)) {
-            //         window.clearInterval(slideTimer);
-            //       }
-            //     }, 25);
-            //   } else {
-            //     let scrollAmount = 0;
-            //     let slideTimer = setInterval(function () {
-            //       e.target.scrollLeft -= 10;
-            //       scrollAmount += 10;
-            //       if (scrollAmount >= Math.abs(e.deltaX)) {
-            //         window.clearInterval(slideTimer);
-            //       }
-            //     }, 25);
-            //   }
-            // }
-          }}
+          className="container"
+          // onWheel={(e) => {
+          //   if (e.deltaX) return;
+          //   e.target.scrollLeft += e.deltaY + e.deltaX;
+          //   // console.log(e);
+          //   // if (e.deltaX === 0) {
+          //   //   if (e.deltaY > 0) {
+          //   //     let scrollAmount = 0;
+          //   //     let slideTimer = setInterval(function () {
+          //   //       e.target.scrollLeft += 10;
+          //   //       scrollAmount += 10;
+          //   //       if (scrollAmount >= Math.abs(e.deltaY)) {
+          //   //         window.clearInterval(slideTimer);
+          //   //       }
+          //   //     }, 25);
+          //   //   } else {
+          //   //     let scrollAmount = 0;
+          //   //     let slideTimer = setInterval(function () {
+          //   //       e.target.scrollLeft -= 10;
+          //   //       scrollAmount += 10;
+          //   //       if (scrollAmount >= Math.abs(e.deltaY)) {
+          //   //         window.clearInterval(slideTimer);
+          //   //       }
+          //   //     }, 25);
+          //   //   }
+          //   // }
+          //   // } else {
+          //   //   if (e.deltaX > 0) {
+          //   //     let scrollAmount = 0;
+          //   //     let slideTimer = setInterval(function () {
+          //   //       e.target.scrollLeft += 10;
+          //   //       scrollAmount += 10;
+          //   //       if (scrollAmount >= Math.abs(e.deltaX)) {
+          //   //         window.clearInterval(slideTimer);
+          //   //       }
+          //   //     }, 25);
+          //   //   } else {
+          //   //     let scrollAmount = 0;
+          //   //     let slideTimer = setInterval(function () {
+          //   //       e.target.scrollLeft -= 10;
+          //   //       scrollAmount += 10;
+          //   //       if (scrollAmount >= Math.abs(e.deltaX)) {
+          //   //         window.clearInterval(slideTimer);
+          //   //       }
+          //   //     }, 25);
+          //   //   }
+          //   // }
+          // }}
         >
-          {data.map((item, index) => (
-            <div
-              key={item.id}
-              className="project flex gap-[20px] min-w-[656px] cursor-pointer"
-              onWheel={(e) => {
-                e.stopPropagation();
-                if (e.deltaX) return;
-                const container =
-                  document.getElementsByClassName('container')[0];
-                container.scrollLeft += e.deltaY + e.deltaX;
+          <div className="container2 px-[257px]">
+            {data.map((item, index) => (
+              <div
+                key={item.id}
+                className="project flex gap-[20px] min-w-[656px] cursor-pointer"
+                // onWheel={(e) => {
+                //   e.stopPropagation();
+                //   if (e.deltaX) return;
+                //   const container =
+                //     document.getElementsByClassName('container')[0];
+                //   container.scrollLeft += e.deltaY + e.deltaX;
 
-                // console.log(e);
-                // if (e.deltaX === 0) {
-                //   if (e.deltaY > 0) {
-                //     let scrollAmount = 0;
-                //     let slideTimer = setInterval(function () {
-                //       const container =
-                //         document.getElementsByClassName('container')[0];
-                //       container.scrollLeft += 10;
-                //       scrollAmount += 10;
-                //       if (scrollAmount >= Math.abs(e.deltaY)) {
-                //         window.clearInterval(slideTimer);
-                //       }
-                //     }, 25);
-                //   } else {
-                //     let scrollAmount = 0;
-                //     let slideTimer = setInterval(function () {
-                //       const container =
-                //         document.getElementsByClassName('container')[0];
-                //       container.scrollLeft -= 10;
-                //       scrollAmount += 10;
-                //       if (scrollAmount >= Math.abs(e.deltaY)) {
-                //         window.clearInterval(slideTimer);
-                //       }
-                //     }, 25);
-                //   }
-                // }
-                // } else {
-                //   if (e.deltaX > 0) {
-                //     let scrollAmount = 0;
-                //     let slideTimer = setInterval(function () {
-                //       const container =
-                //         document.getElementsByClassName('container')[0];
-                //       container.scrollLeft += 10;
-                //       scrollAmount += 10;
-                //       if (scrollAmount >= Math.abs(e.deltaX)) {
-                //         window.clearInterval(slideTimer);
-                //       }
-                //     }, 25);
-                //   } else {
-                //     let scrollAmount = 0;
-                //     let slideTimer = setInterval(function () {
-                //       const container =
-                //         document.getElementsByClassName('container')[0];
-                //       container.scrollLeft -= 10;
-                //       scrollAmount += 10;
-                //       if (scrollAmount >= Math.abs(e.deltaX)) {
-                //         window.clearInterval(slideTimer);
-                //       }
-                //     }, 25);
-                //   }
-                // }
-              }}
-              onClick={openProject}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full highlight"
-              />
-            </div>
-          ))}
+                //   // console.log(e);
+                //   // if (e.deltaX === 0) {
+                //   //   if (e.deltaY > 0) {
+                //   //     let scrollAmount = 0;
+                //   //     let slideTimer = setInterval(function () {
+                //   //       const container =
+                //   //         document.getElementsByClassName('container')[0];
+                //   //       container.scrollLeft += 10;
+                //   //       scrollAmount += 10;
+                //   //       if (scrollAmount >= Math.abs(e.deltaY)) {
+                //   //         window.clearInterval(slideTimer);
+                //   //       }
+                //   //     }, 25);
+                //   //   } else {
+                //   //     let scrollAmount = 0;
+                //   //     let slideTimer = setInterval(function () {
+                //   //       const container =
+                //   //         document.getElementsByClassName('container')[0];
+                //   //       container.scrollLeft -= 10;
+                //   //       scrollAmount += 10;
+                //   //       if (scrollAmount >= Math.abs(e.deltaY)) {
+                //   //         window.clearInterval(slideTimer);
+                //   //       }
+                //   //     }, 25);
+                //   //   }
+                //   // }
+                //   // } else {
+                //   //   if (e.deltaX > 0) {
+                //   //     let scrollAmount = 0;
+                //   //     let slideTimer = setInterval(function () {
+                //   //       const container =
+                //   //         document.getElementsByClassName('container')[0];
+                //   //       container.scrollLeft += 10;
+                //   //       scrollAmount += 10;
+                //   //       if (scrollAmount >= Math.abs(e.deltaX)) {
+                //   //         window.clearInterval(slideTimer);
+                //   //       }
+                //   //     }, 25);
+                //   //   } else {
+                //   //     let scrollAmount = 0;
+                //   //     let slideTimer = setInterval(function () {
+                //   //       const container =
+                //   //         document.getElementsByClassName('container')[0];
+                //   //       container.scrollLeft -= 10;
+                //   //       scrollAmount += 10;
+                //   //       if (scrollAmount >= Math.abs(e.deltaX)) {
+                //   //         window.clearInterval(slideTimer);
+                //   //       }
+                //   //     }, 25);
+                //   //   }
+                //   // }
+                // }}
+                onClick={openProject}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full highlight"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       )}
       <div

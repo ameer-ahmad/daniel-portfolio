@@ -57,13 +57,32 @@
 }
 
 .container {
+  height: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  max-width: 100vh;
+  position: relative;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
-  height: 100%;
-  overflow-x: hidden;
 }
+
 .container::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+.container2 {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  display: flex;
+  gap: 356px;
+  position: absolute;
+  left: -20%;
+
+  @media screen and (max-height: 800px) {
+    left: 0;
+  }
 }
 
 body {
@@ -207,10 +226,9 @@ body {
     gap: 25px;
   }
 
-  .container {
-    padding: 15px 15px;
+  .container2 {
     gap: 150px;
-    overflow-x: auto;
+    padding: 15px 15px;
   }
 
   .project {
@@ -269,5 +287,11 @@ body {
 
   .project:hover {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container2 {
+    left: -50vh;
   }
 }
