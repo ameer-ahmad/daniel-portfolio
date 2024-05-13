@@ -175,9 +175,9 @@ body {
   height: auto;
 }
 
-/* .project:hover {
+.project:hover {
   transform: translateY(-10px);
-} */
+}
 
 .highlight::selection {
   background-color: #39ff14;
