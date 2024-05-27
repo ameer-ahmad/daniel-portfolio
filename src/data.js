@@ -46,6 +46,10 @@ const data = [
     image: bookCovers,
     subPages: [
       {
+        image: bookCovers,
+        caption: '',
+      },
+      {
         image: book1,
         caption: '',
       },
@@ -130,11 +134,6 @@ const data = [
         image: digital,
         caption:
           'Digital Materiality—exaggerating realistic 3D textures to create materiality unique to digital artifacts.',
-      },
-      {
-        image: bookCovers,
-        caption:
-          'Thesis Process Book, 6" x 9", Letraset on silver corrugated paper cover, book printed in RISO on 60 lb text Lettermark gray & cream paper + 70 lb text Husky paper.',
       },
       {
         image: circuit,
